@@ -6,6 +6,7 @@ import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 import { ArrowRight, Lightbulb, Clock, Users, Target, Rocket, Brain, ChevronDown, Menu, X, CheckCircle, Star, Phone, MapPin, Twitter, Facebook, Instagram, Linkedin } from "lucide-react"
 import { motion, useAnimation } from "framer-motion"
+import Image from 'next/image';
 
 export function Index() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -100,7 +101,7 @@ export function Index() {
             <img
               src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/niki1-6LOrchXZyPw06lJasRqWeywt3LFiyP.jpg"
               alt="Osaka cityscape at night"
-              className="w-full h-full object-cover object-center"
+              className="w-full h-auto"
             />
             <div className="absolute inset-0 bg-white bg-opacity-80 backdrop-blur-sm"></div>
           </motion.div>
@@ -295,10 +296,12 @@ export function Index() {
                   transition={{ duration: 0.5 }}
                   className="flex flex-col items-center text-center bg-gray-50 p-8 rounded-2xl shadow-md"
                 >
-                  <img
+                  <Image
                     src={instructor.image}
                     alt={instructor.name}
-                    className="w-48 h-48 rounded-full mb-6 border-4 border-blue-100 shadow-lg"
+                    width={192}
+                    height={192}
+                    className="rounded-full mb-6 border-4 border-blue-100 shadow-lg"
                   />
                   <h3 className="text-2xl font-bold mb-4 text-gray-900">{instructor.name}</h3>
                   <p className="text-gray-600 mb-6">{instructor.description}</p>
