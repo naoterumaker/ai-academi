@@ -98,10 +98,11 @@ export function Index() {
             animate={{ scale: 1 }}
             transition={{ duration: 10, ease: "easeOut" }}
           >
-            <img
+            <Image
               src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/niki1-6LOrchXZyPw06lJasRqWeywt3LFiyP.jpg"
               alt="Osaka cityscape at night"
-              className="w-full h-auto"
+              width={1920}
+              height={1080}
             />
             <div className="absolute inset-0 bg-white bg-opacity-80 backdrop-blur-sm"></div>
           </motion.div>
