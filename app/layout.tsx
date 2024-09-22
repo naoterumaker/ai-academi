@@ -9,14 +9,15 @@ export const metadata: Metadata = {
   description: 'AIの波に乗り遅れないために。フリーランスや個人事業主のためのAI集中講座。2日間でAIスキルを一気に習得し、キャリアアップを実現します。',
   keywords: 'AI, 人工知能, スキルアップ, フリーランス, 個人事業主, 講座, 大阪',
   authors: [{ name: 'あなたのAIアカデミア' }],
+  metadataBase: new URL('https://ai-academi.vercel.app'),
   openGraph: {
     title: 'あなたのAIアカデミア - AI時代を生き抜くスキルを2日間で習得',
     description: 'AIの波に乗り遅れないために。フリーランスや個人事業主のためのAI集中講座。2日間でAIスキルを一気に習得し、キャリアアップを実現します。',
-    url: 'https://ai-academi.vercel.app',
+    url: '/',
     siteName: 'あなたのAIアカデミア',
     images: [
       {
-        url: 'https://ai-academi.vercel.app/og-image.png',
+        url: '/og-image.png',
         width: 1200,
         height: 630,
       },
@@ -28,7 +29,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'あなたのAIアカデミア - AI時代を生き抜くスキルを2日間で習得',
     description: 'AIの波に乗り遅れないために。フリーランスや個人事業主のためのAI集中講座。2日間でAIスキルを一気に習得し、キャリアアップを実現します。',
-    images: ['https://ai-academi.vercel.app/og-image.png'],
+    images: ['/og-image.png'],
   },
   icons: {
     icon: '/favicon.ico',
