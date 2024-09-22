@@ -12,11 +12,11 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'あなたのAIアカデミア - AI時代を生き抜くスキルを2日間で習得',
     description: 'AIの波に乗り遅れないために。フリーランスや個人事業主のためのAI集中講座。2日間でAIスキルを一気に習得し、キャリアアップを実現します。',
-    url: 'https://your-ai-academia.vercel.app',
+    url: 'https://ai-academi.vercel.app',
     siteName: 'あなたのAIアカデミア',
     images: [
       {
-        url: 'https://your-ai-academia.vercel.app/og-image.jpg',
+        url: 'https://ai-academi.vercel.app/og-image.png',
         width: 1200,
         height: 630,
       },
@@ -28,7 +28,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'あなたのAIアカデミア - AI時代を生き抜くスキルを2日間で習得',
     description: 'AIの波に乗り遅れないために。フリーランスや個人事業主のためのAI集中講座。2日間でAIスキルを一気に習得し、キャリアアップを実現します。',
-    images: ['https://your-ai-academia.vercel.app/og-image.jpg'],
+    images: ['https://ai-academi.vercel.app/og-image.png'],
   },
   icons: {
     icon: '/favicon.ico',
