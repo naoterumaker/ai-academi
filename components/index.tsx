@@ -25,7 +25,7 @@ export function Index() {
   return (
     <div className="flex flex-col min-h-screen bg-white text-gray-900">
       <header className="sticky top-0 z-50 w-full border-b border-gray-200 bg-white/80 backdrop-blur-md supports-[backdrop-filter]:bg-white/60">
-        <div className="container flex h-16 items-center justify-between px-4">
+        <div className="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 flex h-16 items-center justify-between">
           <motion.a 
             className="flex items-center justify-center" 
             href="#"
@@ -98,15 +98,14 @@ export function Index() {
             animate={{ scale: 1 }}
             transition={{ duration: 10, ease: "easeOut" }}
           >
-            <Image
+            <img
               src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/niki1-6LOrchXZyPw06lJasRqWeywt3LFiyP.jpg"
               alt="Osaka cityscape at night"
-              width={1920}
-              height={1080}
+              className="w-full h-auto"
             />
             <div className="absolute inset-0 bg-white bg-opacity-80 backdrop-blur-sm"></div>
           </motion.div>
-          <div className="container px-4 md:px-6 relative z-10">
+          <div className="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 relative z-10">
             <motion.div
               initial={{ opacity: 0, y: 50 }}
               animate={controls}
@@ -143,7 +142,7 @@ export function Index() {
         </section>
 
         <section id="コンセプト" className="w-full py-24 md:py-32 bg-gray-50">
-          <div className="container px-4 md:px-6">
+          <div className="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <motion.h2
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -177,7 +176,7 @@ export function Index() {
         </section>
 
         <section id="特徴" className="w-full py-24 md:py-32 bg-white">
-          <div className="container px-4 md:px-6">
+          <div className="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <motion.h2
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -211,7 +210,7 @@ export function Index() {
         </section>
 
         <section id="カリキュラム" className="w-full py-24 md:py-32 bg-gray-50">
-          <div className="container px-4 md:px-6">
+          <div className="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <motion.h2
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -254,7 +253,7 @@ export function Index() {
         </section>
 
         <section id="講師紹介" className="w-full py-24 md:py-32 bg-white">
-          <div className="container px-4 md:px-6">
+          <div className="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <motion.h2
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -330,7 +329,7 @@ export function Index() {
         </section>
 
         <section id="FAQ" className="w-full py-24 md:py-32 bg-gray-50">
-          <div className="container px-4 md:px-6">
+          <div className="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <motion.h2
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -362,7 +361,7 @@ export function Index() {
         </section>
 
         <section className="w-full py-24 md:py-32 bg-blue-600">
-          <div className="container px-4 md:px-6 text-center">
+          <div className="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 text-center">
             <motion.h2
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -394,7 +393,7 @@ export function Index() {
         </section>
 
         <section className="w-full py-24 md:py-32 bg-white">
-          <div className="container px-4 md:px-6">
+          <div className="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div className="grid gap-10 md:grid-cols-2">
               <motion.div
                 initial={{ opacity: 0, x: -20 }}
@@ -439,7 +438,7 @@ export function Index() {
       </main>
 
       <footer className="bg-gray-50 border-t border-gray-200 py-12">
-        <div className="container px-4 md:px-6">
+        <div className="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
             <div>
               <h3 className="text-lg font-semibold mb-4 text-gray-900">あなたのAIアカデミア</h3>

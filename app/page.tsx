@@ -1,5 +1,9 @@
-import { Index } from "@/components/index"
+import dynamic from 'next/dynamic'
+
+const DynamicIndex = dynamic(() => import('@/components/index').then((mod) => mod.Index), {
+  ssr: false,
+})
 
 export default function Page() {
-  return <Index />
+  return <DynamicIndex />
 }
