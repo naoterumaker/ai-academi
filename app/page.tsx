@@ -1,6 +1,6 @@
 import dynamic from 'next/dynamic'
 
-const DynamicIndex = dynamic(() => import('@/components/index').then((mod) => mod.Index), {
+const DynamicIndex = dynamic(() => import('@/components/index'), {
   ssr: false,
 })
 
