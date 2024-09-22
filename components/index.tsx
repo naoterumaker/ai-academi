@@ -312,7 +312,7 @@ export default function Index() {
                   transition={{ duration: 0.5 }}
                   className="bg-gray-50 p-6 rounded-lg shadow-md hover:shadow-lg transition-all duration-300"
                 >
-                  <p className="text-gray-600 mb-4 italic">"{testimonial.comment}"</p>
+                  <p className="text-gray-600 mb-4 italic">{`"${testimonial.comment}"`}</p>
                   <p className="font-semibold text-gray-900">{testimonial.name}</p>
                   <p className="text-sm text-blue-600">{testimonial.role}</p>
                 </motion.div>
