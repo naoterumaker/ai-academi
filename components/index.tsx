@@ -97,17 +97,19 @@ export default function Index() {
       )}
 
       <main className="flex-1">
-        <section className="relative w-full py-32 md:py-48 lg:py-64 overflow-hidden bg-gradient-to-r from-blue-600 to-purple-600">
+        <section className="relative w-full py-16 md:py-24 lg:py-32 overflow-hidden bg-gradient-to-br from-blue-900 via-purple-800 to-indigo-900">
           <motion.div 
             className="absolute inset-0 z-0"
-            initial={{ scale: 1.1 }}
-            animate={{ scale: 1 }}
+            initial={{ scale: 1.1, opacity: 0 }}
+            animate={{ scale: 1, opacity: 0.2 }}
             transition={{ duration: 10, ease: "easeOut" }}
           >
-            <img
+            <Image
               src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/niki1-6LOrchXZyPw06lJasRqWeywt3LFiyP.jpg"
               alt="Osaka cityscape at night"
-              className="w-full h-full object-cover object-center opacity-20"
+              layout="fill"
+              objectFit="cover"
+              quality={10}
             />
           </motion.div>
           <div className="container mx-auto px-4 md:px-6 relative z-10">
@@ -116,25 +118,57 @@ export default function Index() {
               animate={controls}
               className="flex flex-col items-center space-y-8 text-center"
             >
-              <div className="space-y-4">
-                <h1 className="text-4xl font-extrabold tracking-tighter sm:text-5xl md:text-6xl lg:text-7xl/none text-white drop-shadow-lg">
-                  「何から始めたらいいのか分からない」を2日で解決！
-                </h1>
-                <p className="text-2xl font-semibold text-blue-200 drop-shadow">
-                  駆動型生成AI塾 あなたのAIアカデミア
-                </p>
-                <p className="mx-auto max-w-[800px] text-white text-xl md:text-2xl/relaxed font-light">
-                  AIの波に飲み込まれそうで、不安を感じていませんか？
-                </p>
-              </div>
-              <ul className="text-left text-white space-y-2 font-medium">
+              <motion.h1 
+                className="text-4xl font-extrabold tracking-tight sm:text-5xl md:text-6xl lg:text-7xl/none text-white drop-shadow-lg"
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.2, duration: 0.8 }}
+              >
+                <p>たった2日で</p>
+                <p>一生涯のAIスキルを</p>
+                <p>今ここに</p>
+              </motion.h1>
+              <motion.p 
+                className="text-2xl font-semibold text-blue-200 drop-shadow"
+                initial={{ opacity: 0, y: 10 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.4, duration: 0.8 }}
+              >
+                駆動型生成AI塾 あなたのAIアカデミア
+              </motion.p>
+              <motion.p 
+                className="mx-auto max-w-[800px] text-white text-xl md:text-2xl/relaxed font-light"
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.6, duration: 0.8 }}
+              >
+                AIの波に飲み込まれそうで、不安を感じていませんか？
+              </motion.p>
+              <motion.ul 
+                className="text-left text-white space-y-2 font-medium"
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.8, duration: 0.8 }}
+              >
                 <li className="flex items-center"><CheckCircle className="mr-2 h-5 w-5 text-blue-300" /> 周りはAIを使いこなしているのに、自分は何から手をつけていいか分からない</li>
                 <li className="flex items-center"><CheckCircle className="mr-2 h-5 w-5 text-blue-300" /> AIを活用して業務効率化したいけど、どこから学べばいいの？</li>
                 <li className="flex items-center"><CheckCircle className="mr-2 h-5 w-5 text-blue-300" /> AIについて全然触れていなくて焦る。短期間で一気に学びたい！</li>
-              </ul>
-              <p className="text-white text-lg font-medium">そんな焦りや不安を抱えるフリーランスのあなたへ。</p>
-              <div className="space-y-4">
-                <Button className="bg-white text-blue-600 hover:bg-blue-50 text-lg py-6 px-10 rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg" asChild>
+              </motion.ul>
+              <motion.p 
+                className="text-white text-lg font-medium"
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 1, duration: 0.8 }}
+              >
+                そんな焦りや不安を抱えるフリーランスのあなたへ。
+              </motion.p>
+              <motion.div 
+                className="space-y-4"
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 1.2, duration: 0.8 }}
+              >
+                <Button className="bg-white text-blue-900 hover:bg-blue-100 text-lg py-6 px-10 rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg" asChild>
                   <a href="https://utage-system.com/p/hQBo2GyH9ugp" target="_blank" rel="noopener noreferrer">
                     今すぐ申し込む <ArrowRight className="ml-2 h-5 w-5" />
                   </a>
@@ -142,7 +176,7 @@ export default function Index() {
                 <p className="text-sm text-blue-200 font-semibold">
                   先着10名限定！お早めにお申し込みください。
                 </p>
-              </div>
+              </motion.div>
             </motion.div>
           </div>
           <motion.div 
@@ -154,7 +188,7 @@ export default function Index() {
           </motion.div>
         </section>
 
-        <section className="w-full py-24 md:py-32 bg-gray-50">
+        <section className="w-full py-16 md:py-24 bg-gray-50">
           <div className="container mx-auto px-4 md:px-6">
             <motion.h2
               initial={{ opacity: 0, y: 20 }}
@@ -186,7 +220,7 @@ export default function Index() {
               transition={{ duration: 0.5, delay: 0.6 }}
               className="text-gray-600 text-center max-w-[800px] mx-auto mb-12 text-lg"
             >
-              「あなたのAIアカデミア」は、何から始めればいいのか分からない方でも、たった2日間でAIスキルを一気に習得できる集中講座です。
+              「あなたのAIアカデミア」は、何から始めればいのか分からない方でも、たった2日間でAIスキルを一気に習得できる集中講座です。
             </motion.p>
             <div className="grid gap-8 md:grid-cols-3">
               {[
@@ -212,7 +246,7 @@ export default function Index() {
           </div>
         </section>
 
-        <section id="メリット" className="w-full py-24 md:py-32 bg-white">
+        <section id="メリット" className="w-full py-16 md:py-24 bg-white">
           <div className="container mx-auto px-4 md:px-6">
             <motion.h2
               initial={{ opacity: 0, y: 20 }}
@@ -225,7 +259,7 @@ export default function Index() {
             <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
               {[
                 { icon: Rocket, title: "AIスキルを一気に習得", description: "業務効率が劇的に向上し、時間の節約で新たな挑戦が可能に。" },
-                { icon: Target, title: "高単価案件の受注", description: "AI関連案件を受注し、収入アップを実現。" },
+                { icon: Target, title: "高単価案件の受注", description: "AI関連案件を受注し、売上アップを実現。" },
                 { icon: Users, title: "市場での差別化", description: "AI×あなたの専門性で差別化し、唯一無二の存在に。" },
                 { icon: Brain, title: "キャリアに自信", description: "最新のAI知識を習得し、今後のキャリアに自信を持てます。" }
               ].map((item, index) => (
@@ -247,7 +281,7 @@ export default function Index() {
           </div>
         </section>
 
-        <section id="講師紹介" className="w-full py-24 md:py-32 bg-gradient-to-r from-blue-50 to-indigo-50">
+        <section id="講師紹介" className="w-full py-16 md:py-24 bg-gradient-to-r from-blue-50 to-indigo-50">
           <div className="container mx-auto px-4 md:px-6">
             <motion.h2
               initial={{ opacity: 0, y: 20 }}
@@ -290,7 +324,7 @@ export default function Index() {
           </div>
         </section>
 
-        <section id="参加者の声" className="w-full py-24 md:py-32 bg-white">
+        <section id="参加者の声" className="w-full py-16 md:py-24 bg-white">
           <div className="container mx-auto px-4 md:px-6">
             <motion.h2
               initial={{ opacity: 0, y: 20 }}
@@ -321,7 +355,7 @@ export default function Index() {
           </div>
         </section>
 
-        <section id="プログラム" className="w-full py-24 md:py-32 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
+        <section id="プログラム" className="w-full py-16 md:py-24 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
           <div className="container mx-auto px-4 md:px-6">
             <motion.h2
               initial={{ opacity: 0, y: 20 }}
@@ -355,7 +389,7 @@ export default function Index() {
           </div>
         </section>
 
-        <section className="w-full py-24 md:py-32 bg-white">
+        <section className="w-full py-16 md:py-24 bg-white">
           <div className="container mx-auto px-4 md:px-6">
             <motion.h2
               initial={{ opacity: 0, y: 20 }}
@@ -386,7 +420,7 @@ export default function Index() {
           </div>
         </section>
 
-        <section id="開催詳細" className="w-full py-24 md:py-32 bg-gray-50">
+        <section id="開催詳細" className="w-full py-16 md:py-24 bg-gray-50">
           <div className="container mx-auto px-4 md:px-6">
             <motion.h2
               initial={{ opacity: 0, y: 20 }}
@@ -396,24 +430,57 @@ export default function Index() {
             >
               開催<span className="text-blue-600">詳細</span>
             </motion.h2>
+            <div className="grid md:grid-cols-2 gap-8">
+              <motion.div
+                initial={{ opacity: 0, x: -20 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.5 }}
+                className="relative h-64 md:h-auto"
+              >
+                <Image
+                  src="/ingate_e.webp"
+                  alt="イノゲート外観"
+                  width={1200}
+                  height={720}
+                  className="rounded-lg object-cover"
+                />
+              </motion.div>
+              <motion.div
+                initial={{ opacity: 0, x: 20 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.5 }}
+                className="relative h-64 md:h-auto"
+              >
+                <Image
+                  src="/inogate_gaikan.webp"
+                  alt="イノゲート内観"
+                  width={1200}
+                  height={720}
+                  className="rounded-lg object-cover"
+                />
+              </motion.div>
+            </div>
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5 }}
-              className="bg-white p-8 rounded-2xl shadow-lg max-w-2xl mx-auto"
+              transition={{ duration: 0.5, delay: 0.2 }}
+              className="mt-8 bg-white p-6 rounded-lg shadow-md"
             >
-              <ul className="space-y-4 text-gray-600">
-                <li className="flex items-center"><Clock className="h-6 w-6 text-blue-600 mr-2" /><strong>日程：</strong>10月26日(土)、27日(日)</li>
-                <li className="flex items-center"><Clock className="h-6 w-6 text-blue-600 mr-2" /><strong>時間：</strong>10:30〜18:30（両日とも）</li>
-                <li className="flex items-center"><MapPin className="h-6 w-6 text-blue-600 mr-2" /><strong>場所：</strong>大阪市内（詳細はお申し込み後にご案内）</li>
-                <li className="flex items-center"><Users className="h-6 w-6 text-blue-600 mr-2" /><strong>定員：</strong>先着10名限定</li>
-                <li className="flex items-center"><Target className="h-6 w-6 text-blue-600 mr-2" /><strong>参加費：</strong>100,000円（税込）※分割払いも可能</li>
+              <h3 className="text-xl font-bold mb-4 text-gray-900">開催詳細</h3>
+              <ul className="text-gray-600 space-y-2">
+                <li><strong>日程：</strong>10月26日(土)、27日(日)</li>
+                <li><strong>時間：</strong>10:30〜18:30（両日とも）</li>
+                <li><strong>定員：</strong>先着10名限定</li>
+                <li><strong>参加費：</strong>99,800円（税込）※分割払いも可能</li>
               </ul>
+              <h3 className="text-xl font-bold mt-6 mb-4 text-gray-900">開催場所：イノゲート</h3>
+              <p className="text-gray-600 mb-2">〒530-0001 大阪府大阪市北区梅田1丁目3番1-900号 大阪駅前第1ビル9階</p>
+              <p className="text-gray-600">アクセス：JR「大阪駅」より徒歩3分、各線「梅田駅」より徒歩3分</p>
             </motion.div>
           </div>
         </section>
 
-        <section className="w-full py-24 md:py-32 bg-white">
+        <section className="w-full py-16 md:py-24 bg-white">
           <div className="container mx-auto px-4 md:px-6">
             <motion.h2
               initial={{ opacity: 0, y: 20 }}
@@ -455,40 +522,68 @@ export default function Index() {
           </div>
         </section>
 
-        <section id="申し込み" className="w-full py-24 md:py-32 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
-          <div className="container mx-auto px-4 md:px-6 text-center">
-            <motion.h2
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5 }}
-              className="text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl mb-6"
-            >
-              今こそ行動を起こす時です！
-            </motion.h2>
-            <motion.p 
-              className="mx-auto max-w-[800px] text-blue-100 text-xl mb-8"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.2 }}
-            >
-              AI時代に取り残されないために、一気に学べるこの機会を逃さないでください。<br />
-              たった2日間の投資で、一生使えるAIスキルを手に入れましょう。
-            </motion.p>
+        <section className="relative w-full py-16 md:py-24 lg:py-32 overflow-hidden bg-gradient-to-br from-blue-900 via-purple-800 to-indigo-900">
+          <motion.div 
+            className="absolute inset-0 z-0"
+            initial={{ scale: 1.1, opacity: 0 }}
+            animate={{ scale: 1, opacity: 0.2 }}
+            transition={{ duration: 10, ease: "easeOut" }}
+          >
+            <Image
+              src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/niki1-6LOrchXZyPw06lJasRqWeywt3LFiyP.jpg"
+              alt="Osaka cityscape at night"
+              layout="fill"
+              objectFit="cover"
+              quality={10}
+            />
+          </motion.div>
+          <div className="container mx-auto px-4 md:px-6 relative z-10">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.4 }}
+              initial={{ opacity: 0, y: 50 }}
+              animate={controls}
+              className="flex flex-col items-center space-y-8 text-center"
             >
-              <Button className="bg-white text-blue-600 hover:bg-blue-50 text-lg py-6 px-10 rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg" asChild>
-                <a href="https://utage-system.com/p/hQBo2GyH9ugp" target="_blank" rel="noopener noreferrer">
-                  今すぐ申し込む <ArrowRight className="ml-2 h-5 w-5" />
-                </a>
-              </Button>
+              <motion.h1 
+                className="text-5xl font-extrabold tracking-tight sm:text-6xl md:text-7xl lg:text-8xl/none text-white drop-shadow-lg mb-6"
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.2, duration: 0.8 }}
+              >
+                今こそ行動を起こす時です！
+              </motion.h1>
+              <motion.p 
+                className="mx-auto max-w-[800px] text-white text-xl md:text-2xl/relaxed font-light mb-8"
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.4, duration: 0.8 }}
+              >
+                AI時代に取り残されないために、一気に学べるこの機会を逃さないでください。<br />
+                たった2日間の投資で、一生使えるAIスキルを手に入れましょう。
+              </motion.p>
+              <motion.div 
+                className="flex flex-col sm:flex-row gap-4 mt-8"
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.6, duration: 0.8 }}
+              >
+                <Button className="bg-white text-blue-900 hover:bg-blue-100 text-lg py-6 px-10 rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg" asChild>
+                  <a href="https://utage-system.com/p/hQBo2GyH9ugp" target="_blank" rel="noopener noreferrer">
+                    今すぐ申し込む <ArrowRight className="ml-2 h-5 w-5" />
+                  </a>
+                </Button>
+              </motion.div>
             </motion.div>
           </div>
+          <motion.div 
+            className="absolute bottom-8 left-1/2 transform -translate-x-1/2"
+            animate={{ y: [0, 10, 0] }}
+            transition={{ repeat: Infinity, duration: 1.5 }}
+          >
+            <ChevronDown className="h-12 w-12 text-white opacity-70" />
+          </motion.div>
         </section>
 
-        <section className="w-full py-24 md:py-32 bg-gray-50">
+        <section className="w-full py-16 md:py-24 bg-gray-50">
           <div className="container mx-auto px-4 md:px-6">
             <div className="grid gap-10 md:grid-cols-2">
               <motion.div
@@ -533,7 +628,7 @@ export default function Index() {
         </section>
       </main>
 
-      <footer className="bg-gray-900 text-white py-12">
+      <footer className="bg-gray-900 text-white py-8">
         <div className="container mx-auto px-4 md:px-6">
           <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
             <div>
