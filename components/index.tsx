@@ -97,21 +97,21 @@ export default function Index() {
       )}
 
       <main className="flex-1">
-        <section className="relative w-full py-16 md:py-24 lg:py-32 overflow-hidden bg-gradient-to-br from-blue-900 via-purple-800 to-indigo-900">
-          <motion.div 
-            className="absolute inset-0 z-0"
-            initial={{ scale: 1.1, opacity: 0 }}
-            animate={{ scale: 1, opacity: 0.2 }}
-            transition={{ duration: 10, ease: "easeOut" }}
-          >
-            <Image
-              src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/niki1-6LOrchXZyPw06lJasRqWeywt3LFiyP.jpg"
-              alt="Osaka cityscape at night"
-              layout="fill"
-              objectFit="cover"
-              quality={10}
-            />
-          </motion.div>
+                <section className="relative w-full py-16 md:py-24 lg:py-32 overflow-hidden bg-gradient-to-br from-blue-900 via-blue-800 to-blue-700">
+            <motion.div 
+              className="absolute inset-0 z-0"
+              initial={{ scale: 1.1, opacity: 0 }}
+              animate={{ scale: 1, opacity: 0.1 }}
+              transition={{ duration: 10, ease: "easeOut" }}
+            >
+              <Image
+                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/niki1-6LOrchXZyPw06lJasRqWeywt3LFiyP.jpg"
+                alt="Osaka cityscape at night"
+                layout="fill"
+                objectFit="cover"
+                quality={50}
+              />
+            </motion.div>
           <div className="container mx-auto px-4 md:px-6 relative z-10">
             <motion.div
               initial={{ opacity: 0, y: 50 }}
@@ -134,8 +134,12 @@ export default function Index() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.4, duration: 0.8 }}
               >
-                駆動型生成AI塾 あなたのAIアカデミア
-              </motion.p>
+                <p className="text-5xl font-bold mb-5 bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-600 animate-pulse">あなたのAIアカデミア</p>
+                <p className="text-xl relative inline-block">
+                <span className="absolute bottom-0 left-0 w-full h-1 bg-yellow-300 transform -skew-x-12"></span>
+                <span className="relative z-10 text-2xl font-bold">駆動型生成AI塾</span>
+                </p>
+　　　              </motion.p>
               <motion.p 
                 className="mx-auto max-w-[800px] text-white text-xl md:text-2xl/relaxed font-light"
                 initial={{ opacity: 0, y: 20 }}
@@ -168,13 +172,14 @@ export default function Index() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 1.2, duration: 0.8 }}
               >
-                <Button className="bg-white text-blue-900 hover:bg-blue-100 text-lg py-6 px-10 rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg" asChild>
+                <Button className="bg-white text-blue-900 hover:bg-blue-100 text-xl py-8 px-12 rounded-full transition-all duration-300 transform hover:scale-110 shadow-xl" asChild>
                   <a href="https://utage-system.com/p/hQBo2GyH9ugp" target="_blank" rel="noopener noreferrer">
-                    今すぐ申し込む <ArrowRight className="ml-2 h-5 w-5" />
+                    今すぐ申し込む <ArrowRight className="ml-3 h-6 w-6" />
                   </a>
                 </Button>
-                <p className="text-sm text-blue-200 font-semibold">
-                  先着10名限定！お早めにお申し込みください。
+                <p className="text-lg text-blue-200 font-semibold text-center">
+                  <span className="text-4xl font-extrabold text-yellow-400 animate-pulse">先着10名限定！</span><br />
+                  お早めにお申し込みください。
                 </p>
               </motion.div>
             </motion.div>
@@ -294,14 +299,26 @@ export default function Index() {
             <div className="grid gap-12 md:grid-cols-2">
               {[
                 {
-                  name: "てるさん",
-                  image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/onepiece01_luffy%20(1)-EldukexnTYnnTN9SmUU0rpqwOTeGbk.png",
-                  description: "YouTube台本制作とAI活用の第一人者。動画作成時間を35分から15分に短縮し、再生回数10万回以上を連発。",
+                  name: "てる",
+                  image: "/teru.jpg",
+                  description: [
+                    "• NTTデータAI事業部での経験豊富",
+                    "• iPS細胞研究データ化や大規模システム開発に携わる",
+                    "• 動画編集で大型案件実績あり、YouTubeチャンネル30以上を立ち上げ",
+                    "• （AI特化チャンネルは1.5万人登録）",
+                    "• 現在は生成AI活用支援に注力し、年商1.5億円以上の企業への導入支援実績あり",
+                    "• Xフォロワー5700人を持ち、多業界でのAI活用支援を通じてビジネス革新に貢献"
+                  ].join('\n'),
                 },
                 {
-                  name: "ワンさん",
-                  image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/hengao_mabuta_uragaesu-1wuCTqQEsChAdg9BCagX7ujWTxOAbF.png",
-                  description: "法人向けAIコンサルティングのエキスパート。多数の企業のAI導入を成功に導いた実績。",
+                  name: "ワン",
+                  image: "/onesan.jpg",
+                  description: [
+                    "• ど素人→営業活動開始半年で1050万円の売上",
+                    "• 法人向けに3〜8億規模の会社様にAIコンサル",
+                    "• 「AIはもっとおもしろい」をモットーにAIフリーランスラボを運営",
+                    "• AI関連マネタイズで3ヶ月100万円の売上突破"
+                  ].join('\n'),
                 }
               ].map((instructor, index) => (
                 <motion.div
@@ -317,7 +334,7 @@ export default function Index() {
                     className="w-48 h-48 rounded-full mb-6 border-4 border-blue-100 shadow-lg"
                   />
                   <h3 className="text-2xl font-bold mb-4 text-gray-900">{instructor.name}</h3>
-                  <p className="text-gray-600">{instructor.description}</p>
+                  <p className="text-gray-600 whitespace-pre-line">{instructor.description}</p>
                 </motion.div>
               ))}
             </div>
