@@ -134,7 +134,29 @@ export default function Index() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.4, duration: 0.8 }}
               >
-                <p className="text-5xl font-bold mb-5 bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-600 animate-pulse">あなたのAIアカデミア</p>
+                <motion.p
+                  className="text-8xl font-extrabold mb-8 text-yellow-300"
+                >
+                  {["あ", "な", "た", "の", "A", "I", "ア", "カ", "デ", "ミ", "ア"].map((char, index) => (
+                    <motion.span
+                      key={index}
+                      initial={{ opacity: 0, x: -20 }}
+                      animate={{ 
+                        opacity: [0, 1, 1, 0],
+                        x: [-20, 0, 0, 0]
+                      }}
+                      transition={{ 
+                        delay: index * 0.2,
+                        duration: 3,
+                        times: [0, 0.1, 0.9, 1],
+                        repeat: Infinity,
+                        repeatDelay: 2
+                      }}
+                    >
+                      {char}
+                    </motion.span>
+                  ))}
+                </motion.p>
                 <p className="text-xl relative inline-block">
                 <span className="absolute bottom-0 left-0 w-full h-1 bg-yellow-300 transform -skew-x-12"></span>
                 <span className="relative z-10 text-2xl font-bold">駆動型生成AI塾</span>
