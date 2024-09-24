@@ -474,32 +474,6 @@ export default function Index() {
             >
               開催<span className="text-blue-600">詳細</span>
             </motion.h2>
-            <div className="grid md:grid-cols-2 gap-8">
-              <motion.div
-                initial={{ opacity: 0, x: -20 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.5 }}
-                className="bg-white p-6 rounded-lg shadow-md"
-              >
-                <h3 className="text-xl font-bold mb-4 text-gray-900">開催詳細</h3>
-                <ul className="text-gray-600 space-y-2">
-                  <li><strong>日程：</strong>10月26日(土)、27日(日)</li>
-                  <li><strong>時間：</strong>10:30〜18:30（両日とも）</li>
-                  <li><strong>定員：</strong>先着10名限定</li>
-                  <li><strong>参加費：</strong>99,800円（税込）※分割払いも可能</li>
-                </ul>
-              </motion.div>
-              <motion.div
-                initial={{ opacity: 0, x: 20 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.5 }}
-                className="bg-white p-6 rounded-lg shadow-md"
-              >
-                <h3 className="text-xl font-bold mb-4 text-gray-900">開催場所：イノゲート</h3>
-                <p className="text-gray-600 mb-2">〒530-0001 大阪府大阪市北区梅田1丁目3番1-900号 大阪駅前第1ビル9階</p>
-                <p className="text-gray-600">アクセス：JR「大阪駅」より徒歩3分、各線「梅田駅」より徒歩3分</p>
-              </motion.div>
-            </div>
             <div className="mt-8 grid md:grid-cols-2 gap-8">
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
@@ -530,23 +504,33 @@ export default function Index() {
                 />
               </motion.div>
             </div>
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.2 }}
-              className="mt-8 bg-white p-6 rounded-lg shadow-md"
-            >
-              <h3 className="text-xl font-bold mb-4 text-gray-900">開催詳細</h3>
-              <ul className="text-gray-600 space-y-2">
-                <li><strong>日程：</strong>10月26日(土)、27日(日)</li>
-                <li><strong>時間：</strong>10:30〜18:30（両日とも）</li>
-                <li><strong>定員：</strong>先着10名限定</li>
-                <li><strong>参加費：</strong>99,800円（税込）※分割払いも可能</li>
-              </ul>
-              <h3 className="text-xl font-bold mt-6 mb-4 text-gray-900">開催場所：イノゲート</h3>
-              <p className="text-gray-600 mb-2">〒530-0001 大阪府大阪市北区梅田1丁目3番1-900号 大阪駅前第1ビル9階</p>
-              <p className="text-gray-600">アクセス：JR「大阪駅」より徒歩3分、各線「梅田駅」より徒歩3</p>
-            </motion.div>
+            <div className="grid md:grid-cols-2 gap-8">
+              <motion.div
+                initial={{ opacity: 0, x: -20 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.5 }}
+                className="bg-white p-6 rounded-lg shadow-md"
+              >
+                <h3 className="text-xl font-bold mb-4 text-gray-900">開催詳細</h3>
+                <ul className="text-gray-600 space-y-2">
+                  <li><strong>日程：</strong>10月26日(土)、27日(日)</li>
+                  <li><strong>時間：</strong>10:30〜18:30（両日とも）</li>
+                  <li><strong>定員：</strong>先着10名限定</li>
+                  <li><strong>参加費：</strong>99,800円（税込）※分割払いも可能</li>
+                </ul>
+              </motion.div>
+              <motion.div
+                initial={{ opacity: 0, x: 20 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.5 }}
+                className="bg-white p-6 rounded-lg shadow-md"
+              >
+                <h3 className="text-xl font-bold mb-4 text-gray-900">開催場所：イノゲート</h3>
+                <p className="text-gray-600 mb-2">〒530-0001 大阪府大阪市北区梅田1丁目3番1-900号 大阪駅前第1ビル9階</p>
+                <p className="text-gray-600">アクセス：JR「大阪駅」より徒歩3分、各線「梅田駅」より徒歩3分</p>
+              </motion.div>
+            </div>
+
           </div>
         </section>
 
