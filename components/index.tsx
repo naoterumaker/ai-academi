@@ -59,7 +59,7 @@ export default function Index() {
               transition={{ duration: 0.5 }}
             >
               <Button className="hidden md:inline-flex bg-blue-600 text-white hover:bg-blue-700 transition-colors duration-300" asChild>
-                <a href="https://utage-system.com/p/hQBo2GyH9ugp" target="_blank" rel="noopener noreferrer">
+                <a href="https://utage-system.com/p/TQ0cEeId3KGB" target="_blank" rel="noopener noreferrer">
                   今すぐ申し込む
                 </a>
               </Button>
@@ -88,7 +88,7 @@ export default function Index() {
               {item}
             </a>
           ))}
-          <a href="https://utage-system.com/p/hQBo2GyH9ugp" target="_blank" rel="noopener noreferrer" className="w-full mt-4 mx-4">
+          <a href="https://utage-system.com/p/TQ0cEeId3KGB" target="_blank" rel="noopener noreferrer" className="w-full mt-4 mx-4">
             <Button className="w-full bg-blue-600 text-white hover:bg-blue-700 transition-colors duration-300">
               今すぐ申し込む
             </Button>
@@ -179,7 +179,7 @@ export default function Index() {
                 transition={{ delay: 1.2, duration: 0.8 }}
               >
                 <Button className="bg-white text-blue-900 hover:bg-blue-100 text-xl py-8 px-12 rounded-full transition-all duration-300 transform hover:scale-110 shadow-xl" asChild>
-                  <a href="https://utage-system.com/p/hQBo2GyH9ugp" target="_blank" rel="noopener noreferrer">
+                  <a href="https://utage-system.com/p/TQ0cEeId3KGB" target="_blank" rel="noopener noreferrer">
                     今すぐ申し込む <ArrowRight className="ml-3 h-6 w-6" />
                   </a>
                 </Button>
@@ -231,7 +231,7 @@ export default function Index() {
               {[
                 { icon: Brain, title: "迷わず学べるカリキュラム", description: "初めてでも理解しやすいように、学ぶべきポイントを明確化。" },
                 { icon: Users, title: "実践的なワークショップ", description: "実際に手を動かしながら学ぶので、即戦力のスキルが身につきます。" },
-                { icon: Rocket, title: "専門家の個���サポート", description: "経験豊富な講師陣があなたの疑問をその場で解。" }
+                { icon: Rocket, title: "専門家の個別サポート", description: "経験豊富な講師陣があなたの疑問をその場で解。" }
               ].map((item, index) => (
                 <motion.div
                   key={index}
@@ -307,7 +307,7 @@ export default function Index() {
                     "• 動画編集で大型案件実績あり、YouTubeチャンネル30以上を立ち上げ",
                     "• （AI特化チャンネルは1.5万人登録）",
                     "• 現在は生成AI活支援に注力し、年商1.5億円以上の企業への導入支援実績あり",
-                    "• Xフォロワー5700人を持ち、多業��でのAI活用支援を通じてビジネス革新に貢献"
+                    "• Xフォロワー5700人を持ち、多業でのAI活用支援を通じてビジネス革新に貢献"
                   ].join('\n'),
                 },
                 {
@@ -315,7 +315,7 @@ export default function Index() {
                   image: "/onesan.jpg",
                   description: [
                     "• ど素人→営業活動開始半年で1050万円の売上",
-                    "• 法人向けに3〜8億規模の会社様にAIコンサル",
+                    "• 法人向けに3〜8億規模の会社様にAIコン��ル",
                     "• 「AIはもっとおもしろい」をモットーにAIフリーランスラボを運営",
                     "• AI関連マネタイズで3ヶ月100万円の売上突破"
                   ].join('\n'),
@@ -637,7 +637,7 @@ export default function Index() {
                 transition={{ delay: 0.6, duration: 0.8 }}
               >
                 <Button className="bg-white text-blue-900 hover:bg-blue-100 text-lg py-6 px-10 rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg" asChild>
-                  <a href="https://utage-system.com/p/hQBo2GyH9ugp" target="_blank" rel="noopener noreferrer">
+                  <a href="https://utage-system.com/p/TQ0cEeId3KGB" target="_blank" rel="noopener noreferrer">
                     今すぐ申し込む <ArrowRight className="ml-2 h-5 w-5" />
                   </a>
                 </Button>
