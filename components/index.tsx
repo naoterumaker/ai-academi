@@ -97,7 +97,7 @@ export default function Index() {
       )}
 
       <main className="flex-1">
-                <section className="relative w-full py-16 md:py-24 lg:py-32 overflow-hidden bg-gradient-to-br from-blue-900 via-blue-800 to-blue-700">
+                <section className="relative w-full py-4 md:py-6 lg:py-8 overflow-hidden bg-gradient-to-br from-blue-900 via-blue-800 to-blue-700 flex items-center justify-center min-h-[70vh]">
             <motion.div 
               className="absolute inset-0 z-0"
               initial={{ scale: 1.1, opacity: 0 }}
@@ -116,7 +116,7 @@ export default function Index() {
             <motion.div
               initial={{ opacity: 0, y: 50 }}
               animate={controls}
-              className="flex flex-col items-center space-y-8 text-center"
+              className="flex flex-col items-center space-y-6 text-center"
             >
               <motion.h1 
                 className="text-4xl font-extrabold tracking-tight sm:text-5xl md:text-6xl lg:text-7xl/none text-white drop-shadow-lg"
@@ -136,30 +136,14 @@ export default function Index() {
               >
                 <motion.p
                   className="text-8xl font-extrabold mb-8 text-yellow-300"
+                  animate={{ opacity: [0, 1] }}
+                  transition={{ duration: 2, repeat: Infinity, repeatType: "reverse" }}
                 >
-                  {["あ", "な", "た", "の", "A", "I", "ア", "カ", "デ", "ミ", "ア"].map((char, index) => (
-                    <motion.span
-                      key={index}
-                      initial={{ opacity: 0, x: -20 }}
-                      animate={{ 
-                        opacity: [0, 1, 1, 0],
-                        x: [-20, 0, 0, 0]
-                      }}
-                      transition={{ 
-                        delay: index * 0.2,
-                        duration: 3,
-                        times: [0, 0.1, 0.9, 1],
-                        repeat: Infinity,
-                        repeatDelay: 2
-                      }}
-                    >
-                      {char}
-                    </motion.span>
-                  ))}
+                  あなたのAIアカデミア
                 </motion.p>
                 <p className="text-xl relative inline-block">
                 <span className="absolute bottom-0 left-0 w-full h-1 bg-yellow-300 transform -skew-x-12"></span>
-                <span className="relative z-10 text-2xl font-bold">駆動型生成AI塾</span>
+                <span className="relative z-50 text-5xl font-bold">駆動型生成AI塾</span>
                 </p>
 　　　              </motion.p>
               <motion.p 
@@ -206,13 +190,7 @@ export default function Index() {
               </motion.div>
             </motion.div>
           </div>
-          <motion.div 
-            className="absolute bottom-8 left-1/2 transform -translate-x-1/2"
-            animate={{ y: [0, 10, 0] }}
-            transition={{ repeat: Infinity, duration: 1.5 }}
-          >
-            <ChevronDown className="h-12 w-12 text-white opacity-70" />
-          </motion.div>
+
         </section>
 
         <section className="w-full py-16 md:py-24 bg-gray-50">
@@ -253,7 +231,7 @@ export default function Index() {
               {[
                 { icon: Brain, title: "迷わず学べるカリキュラム", description: "初めてでも理解しやすいように、学ぶべきポイントを明確化。" },
                 { icon: Users, title: "実践的なワークショップ", description: "実際に手を動かしながら学ぶので、即戦力のスキルが身につきます。" },
-                { icon: Rocket, title: "専門家の個別サポート", description: "経験豊富な講師陣があなたの疑問をその場で解。" }
+                { icon: Rocket, title: "専門家の個���サポート", description: "経験豊富な講師陣があなたの疑問をその場で解。" }
               ].map((item, index) => (
                 <motion.div
                   key={index}
@@ -328,8 +306,8 @@ export default function Index() {
                     "• iPS細胞研究データ化や大規模システム開発に携わる",
                     "• 動画編集で大型案件実績あり、YouTubeチャンネル30以上を立ち上げ",
                     "• （AI特化チャンネルは1.5万人登録）",
-                    "• 現在は生成AI活用支援に注力し、年商1.5億円以上の企業への導入支援実績あり",
-                    "• Xフォロワー5700人を持ち、多業界でのAI活用支援を通じてビジネス革新に貢献"
+                    "• 現在は生成AI活支援に注力し、年商1.5億円以上の企業への導入支援実績あり",
+                    "• Xフォロワー5700人を持ち、多業��でのAI活用支援を通じてビジネス革新に貢献"
                   ].join('\n'),
                 },
                 {
@@ -373,21 +351,48 @@ export default function Index() {
             >
               参加者の<span className="text-blue-600">声</span>
             </motion.h2>
-            <div className="grid gap-8 md:grid-cols-2">
+            <div className="grid gap-12 md:grid-cols-2 lg:grid-cols-3">
               {[
-                { name: "Aさん", role: "フリーランスデザイナー", comment: "AIに全く触れていなかった私でも、2日間で自信を持って使いこなせるようになりました。業務効率が上がり、売上もアップしました！" },
-                { name: "Bさん", role: "個人事業主", comment: "何から学べばいいのか分からず悩んでいましたが、この講座で一気に解決しました。今ではAIを活用して新しいサービスを提供できています。" }
+                { 
+                  name: "Aさん", 
+                  role: "フリーランスデザイナー", 
+                  videoUrl: "https://www.youtube.com/embed/bNZh3d8RfsM",
+                  comment: "AIに全く触れていなかった私でも、2日間で自信を持って使いこなせるようになりました。業務効率が上がり、売上もアップしました！"
+                },
+                { 
+                  name: "Bさん", 
+                  role: "個人事業主", 
+                  videoUrl: "https://www.youtube.com/embed/kRDFJKTAnRU",
+                  comment: "何から学べばいいのか分からず悩んでいましたが、この講座で一気に解決しました。今ではAIを活用して新しいサービスを提供できています。"
+                },
+                { 
+                  name: "Cさん", 
+                  role: "マーケター", 
+                  videoUrl: "https://www.youtube.com/embed/AfCLKZ8fNZ0",
+                  comment: "AIを活用したマーケティング戦略の立て方を学び、クライアントの成果を大幅に向上させることができました。この講座は本当に価値がありました。"
+                }
               ].map((testimonial, index) => (
                 <motion.div
                   key={index}
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5 }}
-                  className="bg-gray-50 p-6 rounded-lg shadow-md hover:shadow-lg transition-all duration-300"
+                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  className="bg-gray-50 p-6 rounded-lg shadow-md hover:shadow-lg transition-all duration-300 flex flex-col"
                 >
-                  <p className="text-gray-600 mb-4 italic">{`"${testimonial.comment}"`}</p>
-                  <p className="font-semibold text-gray-900">{testimonial.name}</p>
-                  <p className="text-sm text-blue-600">{testimonial.role}</p>
+                  <div className="mb-4">
+                    <h3 className="text-xl font-bold text-gray-900">{testimonial.name}</h3>
+                    <p className="text-sm text-blue-600">{testimonial.role}</p>
+                  </div>
+                  <div className="aspect-w-16 aspect-h-9 mb-4">
+                    <iframe
+                      src={testimonial.videoUrl}
+                      title={`${testimonial.name}の声`}
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                      allowFullScreen
+                      className="w-full h-full rounded-lg shadow-md"
+                    ></iframe>
+                  </div>
+                  <p className="text-gray-600 italic flex-grow">{`"${testimonial.comment}"`}</p>
                 </motion.div>
               ))}
             </div>
@@ -474,6 +479,32 @@ export default function Index() {
                 initial={{ opacity: 0, x: -20 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.5 }}
+                className="bg-white p-6 rounded-lg shadow-md"
+              >
+                <h3 className="text-xl font-bold mb-4 text-gray-900">開催詳細</h3>
+                <ul className="text-gray-600 space-y-2">
+                  <li><strong>日程：</strong>10月26日(土)、27日(日)</li>
+                  <li><strong>時間：</strong>10:30〜18:30（両日とも）</li>
+                  <li><strong>定員：</strong>先着10名限定</li>
+                  <li><strong>参加費：</strong>99,800円（税込）※分割払いも可能</li>
+                </ul>
+              </motion.div>
+              <motion.div
+                initial={{ opacity: 0, x: 20 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.5 }}
+                className="bg-white p-6 rounded-lg shadow-md"
+              >
+                <h3 className="text-xl font-bold mb-4 text-gray-900">開催場所：イノゲート</h3>
+                <p className="text-gray-600 mb-2">〒530-0001 大阪府大阪市北区梅田1丁目3番1-900号 大阪駅前第1ビル9階</p>
+                <p className="text-gray-600">アクセス：JR「大阪駅」より徒歩3分、各線「梅田駅」より徒歩3分</p>
+              </motion.div>
+            </div>
+            <div className="mt-8 grid md:grid-cols-2 gap-8">
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5 }}
                 className="relative h-64 md:h-auto"
               >
                 <Image
@@ -514,7 +545,7 @@ export default function Index() {
               </ul>
               <h3 className="text-xl font-bold mt-6 mb-4 text-gray-900">開催場所：イノゲート</h3>
               <p className="text-gray-600 mb-2">〒530-0001 大阪府大阪市北区梅田1丁目3番1-900号 大阪駅前第1ビル9階</p>
-              <p className="text-gray-600">アクセス：JR「大阪駅」より徒歩3分、各線「梅田駅」より徒歩3分</p>
+              <p className="text-gray-600">アクセス：JR「大阪駅」より徒歩3分、各線「梅田駅」より徒歩3</p>
             </motion.div>
           </div>
         </section>
@@ -613,13 +644,7 @@ export default function Index() {
               </motion.div>
             </motion.div>
           </div>
-          <motion.div 
-            className="absolute bottom-8 left-1/2 transform -translate-x-1/2"
-            animate={{ y: [0, 10, 0] }}
-            transition={{ repeat: Infinity, duration: 1.5 }}
-          >
-            <ChevronDown className="h-12 w-12 text-white opacity-70" />
-          </motion.div>
+
         </section>
 
         <section className="w-full py-16 md:py-24 bg-gray-50">
