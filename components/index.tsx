@@ -116,36 +116,36 @@ export default function Index() {
             <motion.div
               initial={{ opacity: 0, y: 50 }}
               animate={controls}
-              className="flex flex-col items-center space-y-6 text-center"
+              className="flex flex-col items-center space-y-4 sm:space-y-6 text-center"
             >
               <motion.h1 
-                className="text-4xl font-extrabold tracking-tight sm:text-5xl md:text-6xl lg:text-7xl/none text-white drop-shadow-lg"
+                className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-extrabold tracking-tight text-white drop-shadow-lg"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.2, duration: 0.8 }}
               >
-                <p>たった2日で</p>
-                <p>一生涯のAIスキルを</p>
+                <p className="mb-2 sm:mb-4">たった2日で</p>
+                <p className="mb-2 sm:mb-4">一生涯のAIスキルを</p>
                 <p>今ここに</p>
               </motion.h1>
-              <motion.p 
-                className="text-2xl font-semibold text-blue-200 drop-shadow"
+              <motion.div 
+                className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-semibold text-blue-200 drop-shadow"
                 initial={{ opacity: 0, y: 10 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.4, duration: 0.8 }}
               >
                 <motion.p
-                  className="text-8xl font-extrabold mb-8 text-yellow-300"
+                  className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-extrabold mb-4 sm:mb-8 text-yellow-300"
                   animate={{ opacity: [0, 1] }}
                   transition={{ duration: 2, repeat: Infinity, repeatType: "reverse" }}
                 >
                   あなたのAIアカデミア
                 </motion.p>
-                <p className="text-xl relative inline-block">
-                <span className="absolute bottom-0 left-0 w-full h-1 bg-yellow-300 transform -skew-x-12"></span>
-                <span className="relative z-50 text-5xl font-bold">駆動型生成AI塾</span>
+                <p className="text-lg sm:text-xl md:text-2xl lg:text-3xl relative inline-block">
+                  <span className="absolute bottom-0 left-0 w-full h-1 bg-yellow-300 transform -skew-x-12"></span>
+                  <span className="relative z-50 text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold">駆動型生成AI塾</span>
                 </p>
-　　　              </motion.p>
+              </motion.div>
               <motion.p 
                 className="mx-auto max-w-[800px] text-white text-xl md:text-2xl/relaxed font-light"
                 initial={{ opacity: 0, y: 20 }}
